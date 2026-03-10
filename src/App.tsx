@@ -287,7 +287,7 @@ export const App = () => {
             block
             view="primary"
             onClick={() => {
-              window.gtag('event', '7364_pay_deposit_step5_1');
+              window.gtag('event', '7364_pay_deposit_step5_1', { var: 'var4' });
               setSteps('step4');
             }}
           >
