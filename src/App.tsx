@@ -177,7 +177,7 @@ export const App = () => {
   useTimeout(
     () => {
       if (steps === 'step-confirm3') {
-        window.gtag('event', '7364_sms_pds', { var: 'var4' });
+        window.gtag('event', '7364_sms_pds_step3', { var: 'var4' });
         sendDataToGA({
           sum: pdsSum,
           product_type: 'ПДС',
@@ -185,7 +185,7 @@ export const App = () => {
         setSteps('step-confirmed3');
       }
       if (steps === 'step4') {
-        window.gtag('event', '7364_sms_deposit', { var: 'var4' });
+        window.gtag('event', '7364_sms_deposit_step6', { var: 'var4' });
         submit();
       }
       setOtpCode('');
@@ -209,7 +209,7 @@ export const App = () => {
   };
 
   const goToStep2 = () => {
-    window.gtag('event', '7364_open_pds', { var: 'var4' });
+    window.gtag('event', '7364_open_pds_step1', { var: 'var4' });
     if (shouldErrorInvestSum) {
       setError('Минимальная сумма — 60 000 ₽');
       return;
@@ -219,7 +219,7 @@ export const App = () => {
   };
 
   const goToConfirmStep3 = () => {
-    window.gtag('event', '7364_pay_pds', { var: 'var4' });
+    window.gtag('event', '7364_pay_pds_step2', { var: 'var4' });
     setSteps('step-confirm3');
   };
 
@@ -287,7 +287,7 @@ export const App = () => {
             block
             view="primary"
             onClick={() => {
-              window.gtag('event', '7364_pay_deposit_var1');
+              window.gtag('event', '7364_pay_deposit_step5_1');
               setSteps('step4');
             }}
           >
@@ -352,7 +352,7 @@ export const App = () => {
             block
             view="secondary"
             onClick={() => {
-              window.gtag('event', '7364_open_deposit_after_pds', { var: 'var4' });
+              window.gtag('event', '7364_open_deposit_after_pds_step4', { var: 'var4' });
               setSteps('step3');
             }}
             style={{ backgroundColor: '#FFFFFF24', color: '#fff' }}
